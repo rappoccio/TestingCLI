@@ -8,5 +8,6 @@ int main(int argc, char ** argv)
   std::cout << "j : " << std::endl;
   std::string j;
   std::cin >> j; 
-  
+  std::cout << j << std::endl;
+  std::cout << "Bye, Felica" << std::endl;
 }
