@@ -13,7 +13,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - name: catit
+      run: cat whoop.txt
     - name: compile
       run: g++ testing.cpp -o testing
     - name: run
-      run: ./testing whoop there it is < whoop.txt
+      run: cat whoop.txt | ./testing whoop there it is
