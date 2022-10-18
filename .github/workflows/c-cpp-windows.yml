@@ -1,0 +1,19 @@
+name: C/C++ CI - Windows
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: compile
+      run: g++ testing.cpp -o testing
+    - name: run
+      run: ./testing whoop there it is < whoop.txt
